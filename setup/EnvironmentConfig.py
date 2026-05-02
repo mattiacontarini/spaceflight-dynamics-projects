@@ -46,6 +46,15 @@ acceleration_settings_on_vehicle = {
     "Mars": [
         propagation_setup.acceleration.point_mass_gravity()
     ],
+    "Ceres": [
+        propagation_setup.acceleration.point_mass_gravity(),
+    ],
+    "Vesta": [
+        propagation_setup.acceleration.point_mass_gravity(),
+    ],
+    "MainAsteroidBelt": [
+        propagation_setup.acceleration.ring_gravity()
+    ],
     "Jupiter": [
         propagation_setup.acceleration.spherical_harmonic_gravity(2, 0)
     ],
@@ -114,3 +123,37 @@ ephemeris_settings = {
         body_name_to_use="NEPTUNE BARYCENTER",
     ),
 }
+
+solar_system_bodies = [
+    "Sun",
+    "Mercury",
+    "Venus",
+    "Earth",
+    "Moon",
+    "Mars",
+    "Deimos",
+    "Phobos",
+    "Jupiter",
+    "Io",
+    "Europa",
+    "Ganymede",
+    "Callisto",
+    "Saturn",
+    "Titan",
+    "Rhea",
+    "Iapetus",
+    "Dione",
+    "Tethys",
+    "Enceladus",
+    "Mimas",
+    "Hyperion",
+    "Amalthea",
+    "Uranus",
+    "Neptune",
+    "Ceres",
+    "Vesta",
+    "Pallas",
+]
+
+main_asteroid_belt_total_mass_factor = 4.0079e-4  # From Pitjeva and Pitjev (2018)
+main_asteroid_belt_mean_radius = 2.8 * constants.ASTRONOMICAL_UNIT  # From Kuchynka et al. (2010)
